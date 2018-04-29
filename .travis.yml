@@ -1,0 +1,8 @@
+sudo: true
+dist: trusty
+
+language: ruby
+
+script:
+  - ./functional_tests/bionitio_testruby_2-test.sh -p $TRAVIS_BUILD_DIR/bin/bionitio_testruby_2 -d functional_tests/test_data
+  - ./.travis/unit-test.sh
